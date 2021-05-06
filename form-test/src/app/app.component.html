@@ -1,0 +1,81 @@
+<form>
+
+  <div><h1>Enter Your details here</h1></div>
+
+  <label for="fname">First name:</label><br>
+  <input type="text" #fnameD  [(ngModel)] = "fname" name="firstname" ><br><br>
+  <p #errorName></p>
+
+  <label for="lname">Last name:</label><br>
+  <input type="text" #lnameD  [(ngModel)] = "lname" name="lastname" ><br><br>
+  <p #errorLname></p>
+
+  <label for="number">Mobile Number:</label><br>
+  <input type="text" #phoneD  [(ngModel)] = "phNo" name="phoneNumber" ><br><br>
+  <p #errorNumber></p>
+
+  <label for="email">Email:</label><br>
+  <input type="email" #emailD  [(ngModel)] = "email" name="emailS" ><br><br>
+  <p #errorEmail></p>
+
+  <label for="DOB">DOB:</label><br>
+  <input type="date" #datePickerD  [(ngModel)] = "dob" name="dob" name="dobD" ><br><br>
+  <p #errorDate></p>
+
+  <label for="address">Address:</label><br>
+  <textarea type="text" #addressD   [(ngModel)] = "address" name="passD"></textarea><br><br>
+  <p #errorAddress></p>
+
+  <label for="city">City:</label><br>
+  <input type="text" #cityD  [(ngModel)] = "city" name="cityD"><br><br>
+
+
+  <label for="state">State:</label><br>
+  <input type="text" #stateD  [(ngModel)] = "state" name="stateD"><br><br>
+
+  <label for="password">Password:</label><br>
+  <input type="password" #passD name="passD" [(ngModel)] = "pass"><br><br>
+
+  <label for="confirm_password">Confirm Password:</label><br>
+  <input type="password" id="c_p" #confirm_passwordD  name="cpassD" [(ngModel)] = "cpass" ><br><br>
+  <p #errorCpass></p>
+
+  <input #submit class="submit" type="submit" value="Submit" (click)="captureField()">
+</form>
+
+
+<div *ngIf="showMe" class="modal-content" id="modal-content"><div class="common">
+
+
+  <div class="modal-backdrop fade in"></div>
+
+  <div id="overlay" class="modal vz-modal vz-modal-small fade in" aria-hidden="false" style="display: block;">    <div class="vertical-alignment-helper">
+          <div class="modal-dialog vertical-align-center">
+              <div class="modal-content" id="modal-content"><div class="common">
+
+  <div class="modal-header border-none">
+
+          <button (click)="closeMessage()" type="button" id="btn-close" class="close" data-dismiss="modal"><span aria-hidden="true">×</span></button>
+
+  </div>
+  <div class="modal-body">
+  <p>Please wait while your responses are being recorded</p>
+    </div>
+  <div class="modal-footer border-none">
+
+        <button (click)="closeMessage()" type="button" class="btn btn-primary-red btn-sm btn-danger" id="btn-ok">
+          OK
+        </button>
+
+
+
+
+  </div></div></div>
+          </div>
+      </div>
+  </div>
+
+
+
+
+  </div></div>
